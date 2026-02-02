@@ -1,12 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import FloatingHearts from '@/components/FloatingHearts';
+import ValentineCard from '@/components/ValentineCard';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen romantic-gradient flex items-center justify-center overflow-hidden relative">
+      {/* Floating hearts background */}
+      <FloatingHearts />
+      
+      {/* Subtle sparkles */}
+      <div className="fixed top-20 left-10 text-2xl animate-sparkle opacity-40">✨</div>
+      <div className="fixed top-40 right-20 text-xl animate-sparkle opacity-30" style={{ animationDelay: '0.5s' }}>✨</div>
+      <div className="fixed bottom-32 left-20 text-lg animate-sparkle opacity-35" style={{ animationDelay: '1s' }}>✨</div>
+      <div className="fixed bottom-20 right-10 text-2xl animate-sparkle opacity-40" style={{ animationDelay: '1.5s' }}>✨</div>
+      
+      {/* Main content */}
+      <main className="relative z-10 py-12">
+        <ValentineCard />
+      </main>
     </div>
   );
 };
